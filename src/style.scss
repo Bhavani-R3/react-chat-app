@@ -1,0 +1,23 @@
+// SASS = Syntatical Awsome Style Sheet
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+// variables
+$bg-primary: #6C63FF;
+$bg-dark: #0f0f0f;
+$bg-dark-1: #232d2f;
+$bg-light: #ffffee;
+$bg-green: #005b41;
+$bg-dark-green: #04364a;
+$bg-orange: #f99417;
+$bg-blue: #5272f2;
+$bg-dark-blue: #192655;
+$family: 'Poppins', sans-serif;
+
+* {
+    box-sizing: border-box;
+    font-family: $family
+}
+
+body {
+    background-color: $bg-light;
+}
