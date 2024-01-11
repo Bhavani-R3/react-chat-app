@@ -1,5 +1,5 @@
 import loginImage from './login.svg'
-import signUpImage from './register.svg'
+import signUpImage from './reg-1.svg'
 
 const imgSrc = {
     loginImage,

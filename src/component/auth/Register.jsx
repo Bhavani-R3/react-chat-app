@@ -9,7 +9,7 @@ function Register(props) {
                 <span className="logo">React-Chat-App</span>
             </div>
 
-            <div className="wrapper">
+            <div className="form-wrapper">
                 <div className="left">
                     <img src={imgSrc.signUpImage} alt="no image" />
                 </div>
