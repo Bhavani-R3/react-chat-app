@@ -5,6 +5,9 @@ import "./style.scss";
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import "bootstrap-icons/font/bootstrap-icons.css"
+import "react-toastify/dist/ReactToastify.css"
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -16,3 +19,5 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+// npm i --save bootstrap-icons react-toastify

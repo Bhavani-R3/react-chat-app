@@ -1,8 +1,11 @@
 import React from 'react'
+import "./css/chatwindow.scss"
 
 function ChatWindow() {
   return (
-    <div>ChatWindow</div>
+    <div className='right-side'>
+      ChatWindow
+    </div>
   )
 }
 
