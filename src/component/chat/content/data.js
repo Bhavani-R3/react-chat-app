@@ -60,28 +60,25 @@ const chatMsg = [
         id: 1,
         msg: "Hi,",
         time: "13.30 pm",
-        sen: true,
-        rec: false
+        sen: true
     },
     {
         id: 2,
         msg: "Hello... How Are You?",
         time: "13.31 pm",
-        sen: true,
-        rec: false
+        sen: false
     },
     {
         id: 1,
         msg: "I'm fine..Thank you.. How Are You?",
         time: "13.33 pm",
-        sen: true,
-        rec: false
+        sen: true
     },
     {
         id: 2,
         msg: "I'm fine too.. how is your work going on?",
         time: "13.35 pm",
-        sen: true
+        sen: false
     },
     {
         id: 4,
@@ -93,7 +90,7 @@ const chatMsg = [
         id: 5,
         msg: "Hello... How Are You?",
         time: "Yesterday",
-        sen: true
+        sen: false
     },
     {
         id: 6,

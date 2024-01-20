@@ -1,11 +1,11 @@
 import React from "react";
 import ChatCont from "../chat/ChatCont";
-import "./home.scss"
+import "./home.scss";
 
 function Home(props) {
     return(
         <div className="app-body">
-            <ChatCont/>
+           <ChatCont/> 
         </div>
     )
 }

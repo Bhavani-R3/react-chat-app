@@ -5,13 +5,18 @@ import "./style.scss";
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// require('dotenv').config()
+
 import "bootstrap-icons/font/bootstrap-icons.css"
 import "react-toastify/dist/ReactToastify.css"
+import AuthProvider from './Context/AuthContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <AuthProvider>
+      <App />
+    </AuthProvider>
   </React.StrictMode>
 );
 

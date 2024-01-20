@@ -1,8 +1,28 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import {chatList} from './content/data'
 import './css/userList.scss'
+import { AuthContext } from '../../Context/AuthContext'
 
 function UserList() {
+  const [user, setUser] = useState(false)
+  const context = useContext(AuthContext)
+
+  useEffect(() => {
+    // setUser(chatList)
+  },[])
+
+  if(!user) {
+    return (
+     <div className="chat-list">
+       <div className="blk no-user">
+        <p className='info'>Search for Users</p>
+        <p className="alert">No Users</p>
+        <p> { context.currentUser } </p>
+      </div>
+     </div>
+    )
+  }
+
   return (
     <div className='chat-list'>
       {
