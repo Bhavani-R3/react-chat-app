@@ -5,16 +5,9 @@ export const AuthContext = createContext()
 
 function AuthProvider(props) {
     const { children } = props
-    const [currentUser,setCurrentUser] = useState("john")
-
-    const click = (val) => {
-        setCurrentUser(val)
-    }
+    const [currentUser,setCurrentUser] = useState(false)
 
     let data = {
-        x: 12,
-        y: 'this is string',
-        click,
         currentUser
     }
 
