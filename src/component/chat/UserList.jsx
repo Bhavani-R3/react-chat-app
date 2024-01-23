@@ -17,7 +17,6 @@ function UserList() {
        <div className="blk no-user">
         <p className='info'>Search for Users</p>
         <p className="alert">No Users</p>
-        <p> { context.currentUser } </p>
       </div>
      </div>
     )

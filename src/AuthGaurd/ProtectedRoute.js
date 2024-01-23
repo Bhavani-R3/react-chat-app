@@ -9,7 +9,7 @@ function ProtectedRoute() {
   return (
     <React.Fragment>
         {
-            currentUser ? <Outlet/> : <Navigate to={`/login`}/>
+          currentUser ? <Outlet/> : <Navigate to={`/login`}/>
         }
     </React.Fragment>
   )

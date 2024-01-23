@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import imgSrc from '../../images/pics'
 import { toast } from "react-toastify";
-
 // firebase
 import { auth, db } from '../../firebase'
-import { createUserWithEmailAndPassword, sendEmailVerification } from 'firebase/auth'
+import { createUserWithEmailAndPassword, getAuth, sendEmailVerification } from 'firebase/auth'
 import { doc,setDoc } from 'firebase/firestore' // documents
 
 /* 
@@ -31,7 +30,7 @@ function Register(props) {
     // handler 
     const readData = async (e) => {
         const { name, value } = e.target 
-        setUser({...user, [name]: value})
+        setUser({user, [name]: value})
     }
 
     // submitHandler
@@ -44,13 +43,12 @@ function Register(props) {
 
             // store user credentials in authentication
             const res = await createUserWithEmailAndPassword(auth, email, password)
-                .then(res => {
-                    // verification email link sent to the user email id
-                    res.sendEmailVerification(email)
+                  /*   // verification email link sent to the user email id
+                    auth.sendEmailVerification(email)
                     .then(res => {
                         toast.success("Verification email sent successfully.. check your inbox")
                     }).catch(err => toast.error('something went wrong in an email, verification link failed to send')) 
-                }).catch( err => toast.error(err))
+                }).catch( err => toast.error(err)) */
 
             // store the users data in firestore
             await setDoc(doc(db, "users", res.user.uid), {
