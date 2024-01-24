@@ -4,7 +4,7 @@ import imgSrc from '../../images/pics'
 import { toast } from "react-toastify";
 // firebase
 import { auth, db } from '../../firebase'
-import { createUserWithEmailAndPassword, getAuth, sendEmailVerification } from 'firebase/auth'
+import { createUserWithEmailAndPassword, getAuth, sendEmailVerification, updateProfile } from 'firebase/auth'
 import { doc,setDoc } from 'firebase/firestore' // documents
 
 /* 
@@ -30,7 +30,7 @@ function Register(props) {
     // handler 
     const readData = async (e) => {
         const { name, value } = e.target 
-        setUser({user, [name]: value})
+        setUser({...user, [name]: value})
     }
 
     // submitHandler
@@ -49,6 +49,11 @@ function Register(props) {
                         toast.success("Verification email sent successfully.. check your inbox")
                     }).catch(err => toast.error('something went wrong in an email, verification link failed to send')) 
                 }).catch( err => toast.error(err)) */
+
+            // update user profile
+            await updateProfile(res.user, {
+                displayName: user.name
+            })
 
             // store the users data in firestore
             await setDoc(doc(db, "users", res.user.uid), {
